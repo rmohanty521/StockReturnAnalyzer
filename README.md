@@ -17,13 +17,13 @@ However, even though it diversifies the most it had a maxDD of -0.48 which is wo
 
 All the stocks have a 0.5-0.7 corr meaning diversifying over these stocks gives less protection than appears. KO-TSLA and KO-NVDA are exceptions to this corr.
 
-Ann. ret  Ann. vol  Sharpe  MaxDD   MaxDu
-Ticker                                           
-KO         0.106     0.202   0.601 -0.370   1.958
-NVDA       0.718     0.518   1.302 -0.663  47.200
-SPY        0.152     0.201   0.806 -0.337   2.805
-TLT       -0.047     0.165  -0.209 -0.484   0.269
-TSLA       0.462     0.647   0.910 -0.736  19.343
+| Ticker   |   Ann. ret |   Ann. vol |   Sharpe |   MaxDD |   MaxDu |
+|:---------|-----------:|-----------:|---------:|--------:|--------:|
+| KO       |      0.106 |      0.202 |    0.601 |  -0.37  |   1.958 |
+| NVDA     |      0.718 |      0.518 |    1.302 |  -0.663 |  47.2   |
+| SPY      |      0.152 |      0.201 |    0.806 |  -0.337 |   2.805 |
+| TLT      |     -0.047 |      0.165 |   -0.209 |  -0.484 |   0.269 |
+| TSLA     |      0.462 |      0.647 |    0.91  |  -0.736 |  19.343 |
 
 NVDA has the best sharpe but also the second worst drawdown. Both the metrics are important.    
 
