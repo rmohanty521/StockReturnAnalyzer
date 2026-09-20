@@ -25,6 +25,8 @@ All the stocks have a 0.5-0.7 corr meaning diversifying over these stocks gives 
 | TLT      |     -0.047 |      0.165 |   -0.209 |  -0.484 |   0.269 |
 | TSLA     |      0.462 |      0.647 |    0.91  |  -0.736 |  19.343 |
 
-NVDA has the best sharpe but also the second worst drawdown. Both the metrics are important.    
+NVDA has the best sharpe but also the second worst drawdown. Both the metrics are important.   
+
+![VOL20 graph](images/p2_20dayrolling.png)
 
 Vol spikes are market wide. When covid hit they all spiked together
