@@ -32,3 +32,17 @@ def max_drawdown(prices):
 
 def max_drawup(prices):
     return (prices / prices.cummin() - 1).max()
+
+
+def stats(r):
+    r = r.dropna()
+    n = r.count()
+    eq = (1 + r).cumprod()
+
+    return {
+        "Total ret": eq.iloc[-1] - 1,
+        "Ann. ret": eq.iloc[-1] ** (252 / n) - 1,
+        "Ann. Vol": ann_vol(r),
+        "Sharpe": sharpe(r),
+        "MaxDD": max_drawdown(eq),
+    }

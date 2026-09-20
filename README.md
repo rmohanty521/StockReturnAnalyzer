@@ -32,7 +32,7 @@ Spikes/dips in the vol are seem to be correlated with the close prices. Just eye
 TLT is the only genuine diversifier. From the heatmap we can see that it has a negative or nearly 0 corr with all the other stocks.
 However, even though it diversifies the most it had a maxDD of -0.48 which is worse than the spy so it is also the most costly to hold.
 
-All the stocks have a 0.5-0.7 corr meaning diversifying over these stocks gives less protection than appears. KO-TSLA and KO-NVDA are exceptions to this corr.
+All the stocks have a 0.5-0.7 corr with SPY meaning diversifying over these stocks gives less protection than appears. KO-TSLA and KO-NVDA are exceptions to this corr.
 
 | Ticker   |   Ann. ret |   Ann. vol |   Sharpe |   MaxDD |   MaxDu |
 |:---------|-----------:|-----------:|---------:|--------:|--------:|
@@ -47,3 +47,30 @@ NVDA has the best sharpe but also the second worst drawdown. Both the metrics ar
 ![VOL20 graph](images/p2_20dayrolling.png)
 
 Vol spikes are market wide. When covid hit they all spiked together
+
+# Project 3: SPY 200 and 50-day moving average back testing 
+![MA graph](images/p3_MA_200_50graph.png)
+
+In this project I analyzed a 200 and 50 day moving average. This is a graph showing the moving averages versus the regular closing price. Anytime there is a "golden cross" where the 50-day crosses the 200-day upwards we buy. Everytime it crosses downwards, also known as the "death cross" we sell. Over the course of 16 years we only make 16 trades; 8 roundtrip trades.
+
+![MA return graph](images/p3_returns_50-200.png)
+|                  |   Total ret |   Ann. ret |   Ann. Vol |   Sharpe |     MaxDD |
+|:-----------------|------------:|-----------:|-----------:|---------:|----------:|
+| Buy & hold       |     8.02808 |  0.14106   |   0.170587 | 0.859247 | -0.337173 |
+| Strategy (gross) |     3.41105 |  0.0930854 |   0.13949  | 0.708182 | -0.337173 |
+| Strategy (net)   |     3.37802 |  0.0925929 |   0.139498 | 0.704919 | -0.337173 |
+
+Here we have a graph of the returns from trading using the strategy versus just holding and a table with some statistics. The cost of 0.05% per trade is negligible so I will just compare the gross and buy & hold rows.
+
+We see that buying and holding results in a 14.1% return versus the strategy giving us 9.3%. The sharpe ratio of holding is also 0.85 versus 0.70. From these alone, we can conclude that buying and holding is the better strategy.
+
+What's interesting is that MaxDD is identical for both. The 200-day average reacts too slowly for a 33-day crash: SPY peaked Feb 19 2020 and bottomed Mar 23, but the death cross didn't trigger until Mar 31, so the strategy exited on Apr 1 — nine days after the bottom. It held the full position through the entire decline, so its drawdown matches buy & hold exactly.
+
+It then sat in cash through the recovery, missing +2.3% on Apr 2 and +6.7% on Apr 6. That is where the return gap comes from: 20% of days out of the market, and those days disproportionately contain rebounds.
+
+So the strategy has lower volatility (14.0% vs 17.1%) but a worse risk-adjusted return (Sharpe 0.70 vs 0.86) and no drawdown protection at all. A 200-day lag can only help against slow, grinding declines; not fast crashes.
+
+
+
+
+
