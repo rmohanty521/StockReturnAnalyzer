@@ -1,4 +1,6 @@
 ## Project 1: return analysis on SPY
+![SPY graph](images/p1_SPY_analysis.png)
+
 From this we can see that the returns centralize around 0 on the histogram.
 From the tails we see that there are some days with +10% -10% returns too.
 
@@ -8,10 +10,20 @@ Spikes/dips in the vol are seem to be correlated with the close prices. Just eye
 
 
 ## Project 2: multi-stock analysis
+![Correlation heatmap](images/p2_heatmap_corr.png)
+
 TLT is the only genuine diversifier. From the heatmap we can see that it has a negative or nearly 0 corr with all the other stocks.
 However, even though it diversifies the most it had a maxDD of -0.48 which is worse than the spy so it is also the most costly to hold.
 
 All the stocks have a 0.5-0.7 corr meaning diversifying over these stocks gives less protection than appears. KO-TSLA and KO-NVDA are exceptions to this corr.
+
+        Ann. ret  Ann. vol  Sharpe  MaxDD   MaxDu
+Ticker                                           
+KO         0.106     0.202   0.601 -0.370   1.958
+NVDA       0.718     0.518   1.302 -0.663  47.200
+SPY        0.152     0.201   0.806 -0.337   2.805
+TLT       -0.047     0.165  -0.209 -0.484   0.269
+TSLA       0.462     0.647   0.910 -0.736  19.343
 
 NVDA has the best sharpe but also the second worst drawdown. Both the metrics are important.    
 
