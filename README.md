@@ -1,3 +1,20 @@
+# market-analysis
+
+Quantitative research on equity returns, volatility, and portfolio construction.
+Python · pandas · numpy · matplotlib · seaborn · yfinance
+
+Shared metric functions live in `src/metrics.py`; each project is a notebook in `notebooks/`.
+
+**Data:** daily adjusted prices from Yahoo Finance, 2020-01-01 to present.
+Results are specific to this window, which contains the COVID crash, a historic
+bull run, and the 2022 bond bear market.
+
+## Setup
+```
+pip install -r requirements.txt
+jupyter notebook
+```
+
 ## Project 1: return analysis on SPY
 ![SPY graph](images/p1_SPY_analysis.png)
 
