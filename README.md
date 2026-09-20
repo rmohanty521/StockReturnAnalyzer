@@ -71,6 +71,9 @@ It then sat in cash through the recovery, missing +2.3% on Apr 2 and +6.7% on Ap
 So the strategy has lower volatility (14.0% vs 17.1%) but a worse risk-adjusted return (Sharpe 0.70 vs 0.86) and no drawdown protection at all. A 200-day lag can only help against slow, grinding declines; not fast crashes.
 
 
+# Project 4: Inverse vol portfolio evaluation
+
+
 
 
 
