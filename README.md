@@ -17,7 +17,7 @@ However, even though it diversifies the most it had a maxDD of -0.48 which is wo
 
 All the stocks have a 0.5-0.7 corr meaning diversifying over these stocks gives less protection than appears. KO-TSLA and KO-NVDA are exceptions to this corr.
 
-        Ann. ret  Ann. vol  Sharpe  MaxDD   MaxDu
+Ann. ret  Ann. vol  Sharpe  MaxDD   MaxDu
 Ticker                                           
 KO         0.106     0.202   0.601 -0.370   1.958
 NVDA       0.718     0.518   1.302 -0.663  47.200
