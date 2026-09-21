@@ -73,7 +73,24 @@ So the strategy has lower volatility (14.0% vs 17.1%) but a worse risk-adjusted 
 
 # Project 4: Inverse vol portfolio evaluation
 
+In this project, I calculated inverse volatility for 5 stocks based on a 20 day window.
 
+Then we calucated the sum of the inverse vol for those stocks in rows and divided the individual stock inv vol by that value to get a normalized value betweend 0 and 1. These are the "weights" we assign more money to the higher weighted stocks and less to the lower weighted stocks in the hopes that we can achieve a more diverse portfolio. We can see how the weights moved from month to month in the graph below.
+![Weight graph](images/p4_weights.png)
 
+Avg daily turnover: 0.0361
+Annual turnover: 9.1x
+Monthly annual turnover: 1.8x
+|                       |   Total ret |   Ann. ret |   Ann. Vol |   Sharpe |     MaxDD |
+|:----------------------|------------:|-----------:|-----------:|---------:|----------:|
+| equal weight          |    38.778   |   0.266405 |   0.20243  |  1.2685  | -0.361281 |
+| inverse vol           |    10.2203  |   0.167692 |   0.127793 |  1.27747 | -0.233871 |
+| inv vol (net)         |     9.45142 |   0.16239  |   0.127802 |  1.24175 | -0.236483 |
+| inv vol monthly       |     9.39271 |   0.16197  |   0.131863 |  1.20482 | -0.281648 |
+| inv vol monthly (net) |     9.24512 |   0.160905 |   0.131864 |  1.19785 | -0.281648 |
+
+From this chart, just looking at the values unadjusted for price, we can see that the equal weight method had a higher return 38.8x versus 10.2x. It also had a better return at 0.26 versus 0.16. The sharpe values were roughly the same meaning diversifying according the inv vol didn't improve the return to risk ratio. A notable difference was that the max drawdown dropped down to -0.23 for inv vol versus -0.36 for equal weight. This means that the worse loss was reduced significantly. Also the annual volatility for the inv vol was much lower 0.12 versus 0.20.
+
+This strategy falls apart even more when you take into account price (net). Lowering the amount of trades to monthy did not help either and actually made the statistics worse.
 
 
